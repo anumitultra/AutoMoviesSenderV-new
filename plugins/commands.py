@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('⚡ 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡', url='https://t.me/TamilGram_Official')
+                InlineKeyboardButton('⚡ 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡', url='https://t.me/anumitultrabots')
             ],
             [
-                InlineKeyboardButton('⚡ 𝖸𝖮𝖴𝖳𝖴𝖡𝖤 ⚡', url=f"https://youtube.com/channel/UCcel9dkZcPsrWlJGTdyEQrQ"),
+                InlineKeyboardButton('⚡ 𝖸𝖮𝖴𝖳𝖴𝖡𝖤 ⚡', url=f"https://t.me/anumitultrabots"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -48,7 +48,7 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/anumitultrabots')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -94,7 +94,7 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/anumitultrabots')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
