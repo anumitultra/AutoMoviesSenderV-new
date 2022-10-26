@@ -109,11 +109,11 @@ batch - to create link for multiple posts
 link - to create link for one post
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/EvaMariaSupport)
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/TeamEvamaria)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/anumitultrabots)
+[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/anumitultrabots)
 
 ## Credits 
-* [![Anumitultrabots](https://img.shields.io/static/v1?label=EvaMaria&message=devs&color=critical)](https://telegram.dog/anumitultrabots)
+* [![Anumitultrabots](https://img.shields.io/static/v1?label=Anumitultrabots&message=devs&color=critical)](https://telegram.dog/anumitultrabots)
 
 
 ### Note
