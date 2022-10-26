@@ -1,8 +1,8 @@
 {
-    "name": "Tamilgram/AutoMoviesSenderV3",
-    "description": "Clone Of Evamaria & More Features Added",
+    "name": "Anumitultrabots/AutoMoviesSenderV3",
+    "description": "Autofilter bot with url shortner ",
     "stack": "container",
-    "logo": "https://te.legra.ph/file/4d4ca747e699535a055f1.jpg",
+    "logo": "https://telegra.ph/file/2131b7a4cf993403c7602.jpg",
     "keywords": [
       "telegram",
       "auto-filter",
@@ -16,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/Tamilgram/AutoMoviesSenderV3",
-    "repository": "https://github.com/Tamilgram/AutoMoviesSenderV3",
+    "website": "https://github.com/anumitultra/AutoMoviesSenderV3",
+    "repository": "https://github.com/anumitultra/AutoMoviesSenderV3",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
