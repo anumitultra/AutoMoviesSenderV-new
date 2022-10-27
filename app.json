@@ -1,8 +1,7 @@
 {
-    "name": "Anumitultrabots/AutoMoviesSenderV3",
-    "description": "Autofilter bot with url shortner ",
+    "name": "EvaMariaBot",
+    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
-    "logo": "https://telegra.ph/file/2131b7a4cf993403c7602.jpg",
     "keywords": [
       "telegram",
       "auto-filter",
@@ -16,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/anumitultra/AutoMoviesSenderV3",
-    "repository": "https://github.com/anumitultra/AutoMoviesSenderV3",
+    "website": "https://github.com/EvamariaTG/EvaMaria",
+    "repository": "https://github.com/EvamariaTG/EvaMaria",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -30,6 +29,10 @@
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
             "required": true
+        },
+        "SHORTENER_API": {
+            "description": "Send me SHAREUs API",
+            "required": false
         },
         "CHANNELS": {
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
