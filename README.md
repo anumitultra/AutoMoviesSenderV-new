@@ -61,7 +61,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/Tamilgram/AutoMoviesSenderV3">
+<a href="https://heroku.com/deploy?template=https://github.com/anumitultra/AutoMoviesSenderV3">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -70,7 +70,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/Tamilgram/AutoMoviesSenderV3
+git clone https://github.com/anumitultra/AutoMoviesSenderV3
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
