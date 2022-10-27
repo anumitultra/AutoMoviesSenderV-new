@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import *
+from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTENER_API
 from imdb import IMDb
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
@@ -13,6 +13,7 @@ from typing import List
 from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
+import aiohttp
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -39,7 +40,7 @@ class temp(object):
     U_NAME = None
     B_NAME = None
     SETTINGS = {}
-    
+
 async def is_subscribed(bot, query):
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
@@ -191,7 +192,89 @@ def get_size(size):
         i += 1
         size /= 1024.0
     return "%.2f %s" % (size, units[i])
+def get_name2(name):
+    name = name.lower()
+    name = name.replace("english", '')
+    name = name.replace("hindi", '')
+    name = name.replace("tamil", '')
+    name = name.replace("480p", '')
+    name = name.replace("720", '')
+    name = name.replace("1080", '') 
+    name = name.replace("hevc", '')
+    name = name.replace("bluray", '')
+    name = name.replace("6ch", '')
+    name = name.replace("camrip", '')
+    name = name.replace("hd",'')
+    name = name.replace("psa", '')
+    name = name.replace("x265", '')
+    name = name.replace("x264", '')
+    
+    return name
+    
+def get_name(name):
+    name = name.lower()
+    name = name.replace("@cc", '')
+    name = name.replace("telegram", '')
+    name = name.replace("www", '')
+    name = name.replace("join", '')
+    name = name.replace("tg", '')
+    name = name.replace("link", '') 
+    name = name.replace("@", '')
+    name = name.replace("massmovies0", '')
+    name = name.replace("bullmoviee", '')
+    name = name.replace("massmovies", '')
+    name = name.replace("maassmovies",'')
+    name = name.replace("tif", '')
+    name = name.replace("f&t", '')
+    name = name.replace("fbm", '')
+    name = name.replace("mwkott", '')
+    name = name.replace("team_hdt", '')
+    name = name.replace("worldcinematoday", '')
+    name = name.replace("cinematic_world", '')
+    name = name.replace("cinema", '')
+    name = name.replace("hotstar ", '')
+    name = name.replace("apdackup", '')
+    name = name.replace("streamersHub", '')
+    name = name.replace("tg", '')
+    name = name.replace("movies", '')
+    name = name.replace("ava", '')
+    name = name.replace("tamilrockers", '')
+    name = name.replace("imax5", '')
+    name = name.replace("kerala rock", '')
+    name = name.replace("ott", '')
+    name = name.replace("rarefilms", '')
+    name = name.replace("linkzz", '')
+    name = name.replace("movems", '')
+    name = name.replace("moviezz", '')
+    name = name.replace("movie", '')
+    name = name.replace("mlf", '')
+    name = name.replace("[rmk]", '')
+    name = name.replace("[mc]", '')
+    name = name.replace("[mfa]", '')
+    name = name.replace("[mm]", '')
+    name = name.replace("[me]", '')
+    name = name.replace("[", '')
+    name = name.replace("]", '')
+    name = name.replace("mlm", '')
+    name = name.replace("RMK", '')
+    name = name.replace("1tamilmv", '')
+    name = name.replace("linkz", '')
+    name = name.replace("tamilMob", '')
+    name = name.replace("tg", '')
+    name = name.replace("bollyarchives", '')
+    name = name.replace("🎞", '')
+    name = name.replace("🎬", '')
+    name = name.replace("(", '')
+    name = name.replace(")", '')
+    name = name.replace(" ", '.')
+    name = name.replace("_", '.')
+    name = name.replace("...", '.')
+    name = name.replace("..", '.')
 
+    if name[0] == '.':
+        name = name[1:]
+    return name
+    
 def split_list(l, n):
     for i in range(0, len(l), n):
         yield l[i:i + n]  
@@ -375,3 +458,27 @@ def humanbytes(size):
         size /= power
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
+
+async def get_shortlink(link):
+    https = link.split(":")[0]
+    if "http" == https:
+        https = "https"
+        link = link.replace("http", https)
+    url = f'https://dulink.in/api'
+    params = {'api': SHORTENER_API,
+              'url': link,
+              }
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return f'https://dulink.in/api?api={SHORTENER_API}&link={link}'
+
+    except Exception as e:
+        logger.error(e)
+        return f'https://dulink.in/api?api={SHORTENER_API}&link={link}'
