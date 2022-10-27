@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/anumitultra/AutoMoviesSenderV3.git /AutoMoviesSenderV3
+  git clone https://github.com/Mokshb6458/vps /vps
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /AutoMoviesSenderV3
+  git clone $UPSTREAM_REPO /vps
 fi
-cd /AutoMoviesSenderV3
+cd /vps
 pip3 install -U -r requirements.txt
-echo "Starting Bot...."
+echo "Starting Bot url...."
 python3 bot.py
