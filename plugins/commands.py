@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/search_zone')
+                InlineKeyboardButton('🤖ᴜᴘᴅᴀᴛᴇ🤖', url='https://t.me/anumitultrabots')
             ],
             [
-                InlineKeyboardButton('Buy 𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/GreyMatter_Owner"),
+                InlineKeyboardButton('Buy 𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/ajak4405"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -46,7 +46,7 @@ async def start(client, message):
         ], [
             InlineKeyboardButton('🔥Source code🔥', callback_data='source')
         ], [
-            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/GreyMatter_Owner'),
+            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/ajak4405'),
             InlineKeyboardButton('☺️ᴀʙᴏᴜᴛ ᴍᴇ☺️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -91,7 +91,7 @@ async def start(client, message):
         ], [
             InlineKeyboardButton('🔥Source Code🔥', callback_data='source')
         ], [
-            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/GreyMatter_Owner'),
+            InlineKeyboardButton('🌿 Developer 🌿', url='https://t.me/ajak4405'),
             InlineKeyboardButton('☺️ᴀʙᴏᴜᴛ ᴍᴇ☺️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -241,7 +241,7 @@ async def start(client, message):
     buttons = [
                     [
                         InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data'),
-                        InlineKeyboardButton('💞 sʜᴀʀᴇ', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2FSearch_Zone')
+                        InlineKeyboardButton('💞 sʜᴀʀᴇ', url='https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Search+Zone%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+Join%0D%0A+https%3A%2F%2Ft.me%2Fajak4405')
                     ],
                     [
                         InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
