@@ -90,7 +90,7 @@ async def next_page(bot, query):
     # How to Download button
 
     btn.append(
-    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/how_to_download_from_dulink/2')]
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://youtu.be/snvyb37yrs4')]
 )
     if n_offset == 0:
         btn.append(
@@ -675,7 +675,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
 
     btn.append(
-    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/how_to_download_from_dulink/2')]
+    [InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://youtu.be/snvyb37yrs4')]
 )
 
     
